@@ -1,9 +1,6 @@
-import pandas as pd
 import logging
-import numpy as np
 import sys
 import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
 
 ### Assignment Owner: Tian Wang
 
@@ -231,6 +228,8 @@ def stochastic_grad_descent(X, y, alpha=0.1, lambda_reg=1, num_iter=1000):
 def main():
     #Loading the dataset
     print('loading the dataset')
+    with open('data.csv', 'r') as f:
+    	print('hello')
 
     df = pd.read_csv('data.csv', delimiter=',')
     X = df.values[:,:-1]
